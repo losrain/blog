@@ -20,6 +20,7 @@
 
 
 <script>
+import {mapActions} from 'vuex'
 export default {
   data() {
     return {
@@ -30,7 +31,13 @@ export default {
       }
     };
   },
+  mounted() {
+    this.setPageClass('user_register');
+  },
   methods: {
+    ...mapActions([
+      'setPageClass'
+    ]),
     submitForm() {
       var self = this;
       this.$http("http://localhost:3300/signin", self.ruleForm2)

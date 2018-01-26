@@ -40,7 +40,7 @@ export default {
       'setPageClass'
     ]),
     register() {
-      this.$router.push({ name: "register" });
+      this.$router.push({ name: "useRegister" });
     },
     submitForm() {
       var self = this;
