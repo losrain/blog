@@ -23,6 +23,7 @@
 <script>
 import {mapActions} from 'vuex'
 export default {
+  componentName: 'HH',
   data() {
     return {
       ruleForm2: {
@@ -32,8 +33,11 @@ export default {
     };
   },
   mounted() {
-    console.log(this.setPageClass);
-    this.setPageClass('user_login')
+    this.setPageClass('user_login');
+    this.$on('FUN',item => {
+      alert(1);
+    });
+    // 调用 this.$root.broadcast('HH','FUN',item);
   },
   methods: {
     ...mapActions([
